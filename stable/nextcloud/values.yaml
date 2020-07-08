@@ -64,6 +64,10 @@ ingress:
   #      hosts:
   #        - nextcloud.kube.home
   labels: {}
+  hosts:
+  - host: "{{ .Values.nextcloud.host }}"
+    paths:
+      - /
 
 # Allow configuration of lifecycle hooks
 # ref: https://kubernetes.io/docs/tasks/configure-pod-container/attach-handler-lifecycle-event/
